@@ -106,5 +106,32 @@
 
 // console.log(isChecked || !isClose);
 // git init, git add -A, git commit -a -m"second" 
-const a = 5;
-console.log(a);
+// const a = 5;
+// console.log(a);
+
+// ZADANIE ONE
+let numberOfFilms = prompt('How much you watching films?', "1");
+// console.log(numberOfFilms);
+
+// let numberOfFilms = 18;
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
+// console.log(personalMovieDB.privat);
+// console.log(typeof(personalMovieDB.privat));
+// console.log(numberOfFilms);
+// personalMovieDB['movies['lastfilm']'] = prompt('What your lastfilm?', 'Drive');
+// personalMovieDB['movies['filmRating']'] = prompt('What you rating of this film?', '5');
+// console.log(personalMovieDB.movies);
+const lastfilm1 = prompt('What your lastfilm?', 'Drive');
+const filmRating1 = prompt('What you rating of this film?', '5');
+const lastfilm2 = prompt('What your lastfilm?', 'Drive');
+const filmRating2 = prompt('What you rating of this film?', '5');
+personalMovieDB.movies[lastfilm1] = filmRating1;
+personalMovieDB.movies[lastfilm2] = filmRating2;
+console.log(personalMovieDB);
+
