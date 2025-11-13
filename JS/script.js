@@ -110,28 +110,104 @@
 // console.log(a);
 
 // ZADANIE ONE
-let numberOfFilms = prompt('How much you watching films?', "1");
+// let numberOfFilms = prompt('How much you watching films?', "1");
 // console.log(numberOfFilms);
 
 // let numberOfFilms = 18;
-const personalMovieDB = {
-    count: numberOfFilms,
-    movies: {},
-    actors: {},
-    genres: [],
-    privat: false
-};
+// const personalMovieDB = {
+//     count: numberOfFilms,
+//     movies: {},
+//     actors: {},
+//     genres: [],
+//     privat: false
+// };
 // console.log(personalMovieDB.privat);
 // console.log(typeof(personalMovieDB.privat));
 // console.log(numberOfFilms);
 // personalMovieDB['movies['lastfilm']'] = prompt('What your lastfilm?', 'Drive');
 // personalMovieDB['movies['filmRating']'] = prompt('What you rating of this film?', '5');
 // console.log(personalMovieDB.movies);
-const lastfilm1 = prompt('What your lastfilm?', 'Drive');
-const filmRating1 = prompt('What you rating of this film?', '5');
-const lastfilm2 = prompt('What your lastfilm?', 'Drive');
-const filmRating2 = prompt('What you rating of this film?', '5');
-personalMovieDB.movies[lastfilm1] = filmRating1;
-personalMovieDB.movies[lastfilm2] = filmRating2;
-console.log(personalMovieDB);
+// const lastfilm1 = prompt('What your lastfilm?', 'Drive');
+// const filmRating1 = prompt('What you rating of this film?', '5');
+// const lastfilm2 = prompt('What your lastfilm?', 'Drive');
+// const filmRating2 = prompt('What you rating of this film?', '5');
+// personalMovieDB.movies[lastfilm1] = filmRating1;
+// personalMovieDB.movies[lastfilm2] = filmRating2;
+// console.log(personalMovieDB);
 
+// if (4 == 4) {
+//     console.log('Ok');
+// } else {
+//     console.log('notOK');
+// }
+
+// if (1) {   //TRUE!!!
+//     console.log('Ok');
+// } else {
+//     console.log('notOK');
+// }
+
+// if (0) {   //NO!
+//     console.log('Ok');
+// } else {
+//     console.log('notOK');
+// }
+
+// const num = 50;
+
+// if (num < 49) {
+//     console.log('Error');
+// } else if (num > 100) {
+//     console.log('Many');
+// } else {
+//     console.log('Ok!');
+// }
+
+// (num === 50) ? console.log('ok') : console.log('error'); // Это тернарный аргумент
+// // Аргументы бывают тернарные, бинарные и унарные
+
+// switch (num) {
+//     case 49:
+//         console.log('NO');
+//         break;
+//     case 100:
+//         console.log('NO');
+//         break;
+//     case 50:
+//         console.log('YES!');
+//         break;
+//     default:
+//         console.log('Error');
+//     break;
+// }
+
+// && (И) запинается на лжи, а ||(ИЛИ) запинается на правде!
+
+// console.log(1 && "");
+
+// let num = 50;
+
+// while (num < 60) {
+//     console.log(num);
+//     num++;
+// }
+
+// do {
+//     console.log(num);
+//     num++;
+// }
+// while (num < 60);
+
+// for (let i = 1; i < 8; i++) {
+//     if (i === 5) {
+//         //break;
+//         continue;
+//     }
+//     console.log(i);
+// }
+let result = '';
+let lenght = 7;
+for (let i=1; i< lenght; i++) {
+result = result + '*';
+console.log(result);
+};
