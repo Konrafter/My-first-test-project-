@@ -205,9 +205,112 @@
 //     }
 //     console.log(i);
 // }
-let result = '';
-let lenght = 7;
-for (let i=1; i< lenght; i++) {
-result = result + '*';
-console.log(result);
-};
+// let result = '';
+// let lenght = 7;
+// for (let i=1; i< lenght; i++) {
+// result = result + '*';
+// console.log(result);
+// };
+// let result = '';
+// let lenght = 7;
+// for (let i=1; i< lenght; i++) {
+//     for (let j=0; j<i; j++){
+//         result += '*';
+//     }
+// result += '\n';
+// };
+// console.log(result);
+
+//METKA!!!!!!!!!!!
+// first: for (let i=1; i < 4; i++) {
+//     console.log(`1 - ${i}`);
+//     for (let j=1; j < 4; j++) {
+//         console.log(`2 - ${j}`);
+//         for (let k=1; k < 4; k++) {
+//             if (k === 3) continue first; 
+//             console.log(`3 - ${k}`);
+//         }
+//     }
+// }
+/* Задание на урок:
+
+1) Автоматизировать вопросы пользователю про фильмы при помощи цикла
+
+2) Сделать так, чтобы пользователь не мог оставить ответ в виде пустой строки,
+отменить ответ или ввести название фильма длинее, чем 50 символов. Если это происходит - 
+возвращаем пользователя к вопросам опять
+
+3) При помощи условий проверить  personalMovieDB.count, и если он меньше 10 - вывести сообщение
+"Просмотрено довольно мало фильмов", если от 10 до 30 - "Вы классический зритель", а если больше - 
+"Вы киноман". А если не подошло ни к одному варианту - "Произошла ошибка"
+
+4) Потренироваться и переписать цикл еще двумя способами*/
+
+// ZADANIE ONE
+// let numberOfFilms = prompt('How much you watching films?', "1");
+// console.log(numberOfFilms);
+
+// let numberOfFilms = 18;
+// const personalMovieDB = {
+//     count: numberOfFilms,
+//     movies: {},
+//     actors: {},
+//     genres: [],
+//     privat: false
+// };
+// console.log(personalMovieDB.privat);
+// console.log(typeof(personalMovieDB.privat));
+// console.log(numberOfFilms);
+// personalMovieDB['movies['lastfilm']'] = prompt('What your lastfilm?', 'Drive');
+// personalMovieDB['movies['filmRating']'] = prompt('What you rating of this film?', '5');
+// console.log(personalMovieDB.movies);
+// const lastfilm1 = prompt('What your lastfilm?', 'Drive');
+// const filmRating1 = prompt('What you rating of this film?', '5');
+// const lastfilm2 = prompt('What your lastfilm?', 'Drive');
+// const filmRating2 = prompt('What you rating of this film?', '5');
+// personalMovieDB.movies[lastfilm1] = filmRating1;
+// personalMovieDB.movies[lastfilm2] = filmRating2;
+// console.log(personalMovieDB);
+// a.lenght - сколько символов
+// function showFirstMessage() {
+//     console.log('Hello world!');
+// }
+// showFirstMessage();
+let ZAMIKANIE = 1
+for (ZAMIKANIE = 1; ZAMIKANIE < 8; ZAMIKANIE++){
+    console.log(calcPlusZamikanie(0, 0));
+}
+
+function calcPlusZamikanie(a, b) {
+    return(a + b + ZAMIKANIE);
+}
+console.log(calcPlusZamikanie(0, 0));
+
+
+// function ret() {
+//     let n = 50;
+//     return n;
+// }
+// const numFromFunction = ret();
+// console.log(numFromFunction);
+
+//Function Declaration!
+//Function Expression!
+
+// let logger = function(){
+//     console.log('Hello World!');
+// };
+
+// logger();
+
+// const calc = (a, b) => a + b;
+// console.log(calc(1, 2));
+// const calc = a => {
+//     a++;
+//     console.log(a);
+// }
+// calc(1);
+
+// return заканчивает функцию даже если находится внутри цикла, который находится внутри функции
+// undifined в браузере - по причине того, что функция - всегда возвращает что-то. и в случае например с console.log тут возвращается
+// undifined, как и после функции function() {} без аргументов
