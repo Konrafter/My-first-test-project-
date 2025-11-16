@@ -276,15 +276,15 @@
 //     console.log('Hello world!');
 // }
 // showFirstMessage();
-let ZAMIKANIE = 1
-for (ZAMIKANIE = 1; ZAMIKANIE < 8; ZAMIKANIE++){
-    console.log(calcPlusZamikanie(0, 0));
-}
+// let ZAMIKANIE = 1
+// for (ZAMIKANIE = 1; ZAMIKANIE < 8; ZAMIKANIE++){
+//     console.log(calcPlusZamikanie(0, 0));
+// }
 
-function calcPlusZamikanie(a, b) {
-    return(a + b + ZAMIKANIE);
-}
-console.log(calcPlusZamikanie(0, 0));
+// function calcPlusZamikanie(a, b) {
+//     return(a + b + ZAMIKANIE);
+// }
+// console.log(calcPlusZamikanie(0, 0));
 
 
 // function ret() {
@@ -314,3 +314,78 @@ console.log(calcPlusZamikanie(0, 0));
 // return заканчивает функцию даже если находится внутри цикла, который находится внутри функции
 // undifined в браузере - по причине того, что функция - всегда возвращает что-то. и в случае например с console.log тут возвращается
 // undifined, как и после функции function() {} без аргументов
+
+//ZADANIE 1-2 AUTOR COPY
+
+let numberOfFilms;
+
+function start() {
+     numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели', '');
+     while (numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)) {
+        numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели', '');
+     }
+}
+
+start();
+
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
+
+function rememberMyFilms() {
+    for (let i = 0; i < 2; i++) {
+        const a = prompt('Один из нескольких просмотренных фильмов', ''),
+              b = prompt('На сколько оцените его?','');
+
+        if (a != null && b != null && a != '' && b != '' && a.length < 50) {
+            personalMovieDB.movies[a] = b;
+            console.log('done');
+        } else {
+            console.log('error');
+            i--;
+        }
+    }
+}
+
+rememberMyFilms();
+
+function detectPersonalLevel() {
+    if (personalMovieDB.count < 10) {
+        console.log("просмотрено довольно мало фильмов");
+    } else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
+        console.log('Вы классический зритель');
+    } else if (personalMovieDB.count >= 30) {
+        console.log('Вы киноман');
+    } else {
+        console.log("Произошла ошибка");
+    }
+}
+
+detectPersonalLevel();
+
+// function showMyDB() {
+//     if (personalMovieDB['privat'] == false) {
+//         console.log(personalMovieDB);
+//     }
+// }
+// showMyDB();
+
+function showMyDB(hidden) {
+    if (!hidden) {
+        console.log(personalMovieDB);
+    }
+}
+
+showMyDB(personalMovieDB.privat);
+
+function writeYourGenres() {
+    for (let i = 1; i <= 3; i++) {
+        personalMovieDB.genres[i - 1] = prompt(`Ваш любимый жанр под номером ${i}`);
+    }
+}
+
+writeYourGenres();
